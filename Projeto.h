@@ -4,30 +4,48 @@
 #include <string.h>
 #include <windows.h>
 
+FILE *arquivo;
+
 int opMenuPrincipal, opMenuCadastro, opMenuImpressao;
 
-char nomeCliente[80], veiculoCliente[50];
+char nomeCliente[80], veiculoCliente[50], problemaCliente[30];
 
 char senhaAdm[12], loginAdm[20] , senha[12], login[20];
 
+void criarArquivos(){
+	arquivo = fopen("C://Users//joaos//Projeto - São Miguel//Cadastro veiculo//cadastroVeicular.txt", "w+");
+	if (arquivo == 0){
+		printf("arquivo não gerado"); // boa prática no if, colocar primeiro a situação negativa
+	}else
+	{
+		printf("arquivo gerado com sucesso\n");
+	}
 
-struct cadastroFunc
-{
-	
-};
+	fprintf(arquivo, "Nome:%s\n", nomeCliente);
+	fprintf(arquivo, "Veiculo:%s\n", veiculoCliente);
+	fprintf(arquivo, "defeito:%s\n", problemaCliente);
+}
+
 
 void cadastroVeiculo(){
 	printf("Digite seu nome completo\n");
 	scanf(" %[^\n]", &nomeCliente);
 	printf("Informe o veiculo:\n");
 	scanf(" %[^\n]", &veiculoCliente);
+	printf("Problema com o veículo:\n");
+	scanf(" %[^\n]", &problemaCliente);
+	criarArquivos();
 }
 
 void CadastroAdm(){
 	system("cls");
-	printf("cadastre seu usuário:\n");
+	printf("+===================================+\n");
+	printf("|       CADASTRE SEU USUÁRIO        |\n");
+	printf("|-----------------------------------|\n");
     scanf(" %[^\n]", &loginAdm);
-	printf("coloque sua senha:\n");
+	printf("+===================================+\n");
+	printf("|        COLOQUE SUA SENHA          |\n");
+	printf("|-----------------------------------|\n");
     scanf(" %[^\n]", &senhaAdm);
     LoginAdm();
 }
@@ -104,23 +122,19 @@ void MenuCadastro(){
 }
 
 void barraCarregamento(){
+	system("color a"); // muda a cor para verde do terminal
 	int i, j;
-	printf("\n\n Carregando \n\n");
 	
-	for(i = 0; i <= 100; i++){
-		printf("  %d%%\r", i);
-		fflush(stdout);
-		for(j = 0; j < i; j++ ){
-			if (!j){
-				printf("  ");
-			
-			printf("%c", 219);
-			Sleep(100);
-			}
-			if(i == 100){
-			CadastroAdm();
-			}
-		}
+	printf("Carregando:[");
+	
+	for(i = 0; i < 40; i++){
+		printf("#");
+		Sleep(200);// pausa entre os #, 0,2 ms
+	}
+	printf("]Concluído\n");
+	system("pause");
+	if(i == 40){
+		CadastroAdm();
 	}
 }
 
@@ -135,31 +149,4 @@ void MenuImpressao(){
 	printf("|Selecione uma opção ou 5 P/Voltar|\n"); 
 	printf("+=================================+\n");
 	scanf("%i",&opMenuImpressao);
-}
-
-int main(){
-	setlocale(LC_ALL, "Portuguese");
-	do{
-	barraCarregamento();	
-	switch(opMenuPrincipal){
-	case 1:{  // 1-OPCAO 1
-		system("cls");
-		MenuCadastro();
-		break;
-	}
-	case 2:{ //2-OPCAO 2
-		system("cls");
-		MenuImpressao();
-		break;
-	}
-	case 3:{ //3-OPCAO 3
-		break;
-	}
-	case 4:{ //4-OPCAO 4
-		break;
-	}
-	default:
-		break;
-	}
-	}while(opMenuPrincipal!=5);
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
 	<VersionInfo>
-		<VersionNumbers Major="0" Minor="0" Release="0" Build="0"/>
+		<VersionNumbers Major="0" Minor="0" Release="0" Build="86"/>
 		<LanguageID Value="1046"/>
 		<CharsetID Value="1252"/>
 		<CompanyName Value=""/>
@@ -30,7 +30,7 @@
 	<AppType Value="CONSOLE"/>
 	<Files>
 		<File Name="main.c"/>
-		<File Name="header.h"/>
+		<File Name="Projeto.h"/>
 	</Files>
 	<AppIcon>
 		0000010001002020000001000800A80800001600000028000000200000004000
