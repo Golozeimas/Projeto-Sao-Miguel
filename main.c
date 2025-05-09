@@ -7,13 +7,12 @@
 int main()
 {
 	setlocale(LC_ALL, "Portuguese");
-	do{
-	barraCarregamento();	
+	barraCarregamento();
+	do{	
 	switch(opMenuPrincipal){
 	case 1:{  // 1-OPCAO 1
 		system("cls");
 		MenuCadastro();
-		
 		break;
 	}
 	case 2:{ //2-OPCAO 2

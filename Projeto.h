@@ -8,6 +8,8 @@ FILE *arquivo;
 
 int opMenuPrincipal, opMenuCadastro, opMenuImpressao;
 
+int op;
+
 char nomeCliente[80], veiculoCliente[50], problemaCliente[30];
 
 char senhaAdm[12], loginAdm[20] , senha[12], login[20];
@@ -28,6 +30,7 @@ void criarArquivos(){
 
 
 void cadastroVeiculo(){
+	do{
 	printf("Digite seu nome completo\n");
 	scanf(" %[^\n]", &nomeCliente);
 	printf("Informe o veiculo:\n");
@@ -35,6 +38,9 @@ void cadastroVeiculo(){
 	printf("Problema com o veículo:\n");
 	scanf(" %[^\n]", &problemaCliente);
 	criarArquivos();
+	printf("Deseja mais algum usuário? se sim digite qualquer numero, se não digite 0:\n");
+	scanf("%i", &op);
+	}while(op != 0);
 }
 
 void CadastroAdm(){
@@ -52,9 +58,13 @@ void CadastroAdm(){
 
 void LoginAdm(){
 	system("cls");
-	printf("logue seu usuário:\n");
+	printf("+===================================+\n");
+	printf("|         LOGUE SEU USUÁRIO         |\n");
+	printf("|-----------------------------------|\n");
     scanf(" %[^\n]", &login);
-	printf("coloque sua senha:\n");
+	printf("+===================================+\n");
+	printf("|         COLOQUE SUA SENHA         |\n");
+	printf("|-----------------------------------|\n");
     scanf(" %[^\n]", &senha);
     
     if(strcmp(loginAdm, login) == 0 && strcmp(senhaAdm,senha) == 0) // cria uma comparação com a função "strcmp" 
@@ -89,6 +99,7 @@ void MenuPrincipal(){
 
 void MenuCadastro(){
 	do{
+	system("cls");
 	printf("+=================================+\n");
     printf("|       CADASTRO VEICULAR         |\n");
 	printf("|---------------------------------|\n");
