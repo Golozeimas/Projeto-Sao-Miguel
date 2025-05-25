@@ -1,0 +1,17 @@
+
+arquivo:1
+Nome:Matheus
+Veiculo:Corolla
+defeito(elétrico):problema no fusivel
+placa do carro:GHSA123
+numero do telefone:8695949394
+CPF:12345678910
+
+arquivo:2
+Nome:Lucas
+Veiculo:Corsa
+defeito(elétrico):bateria descarregada
+placa do carro:JKA302
+numero do telefone:8695403943
+CPF:3434
+

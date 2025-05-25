@@ -1,0 +1,8 @@
+arquivo:1
+Nome:Matheu
+Veiculo:Van generica
+defeito(elétrico):fusivel queimado
+placa da van:HJSASSD
+numero do telefone:123445567
+CPF:123
+

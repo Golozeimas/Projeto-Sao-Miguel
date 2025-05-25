@@ -1,0 +1,7 @@
+========= REGISTROS DE OR AMENTOS ========
+id:4
+total de custos:2020
+pe a do cliente:Fusivel queimado
+nome do cliente:Matheu
+=========================
+

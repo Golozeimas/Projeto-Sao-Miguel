@@ -2,10 +2,10 @@
 <Layout>
 	<Files>
 		<File Name="main.c" Top="No" Tabpos="1" TopLine="1">
-			<Cursor Line="15" Column="18"/>
+			<Cursor Line="2" Column="20"/>
 		</File>
-		<File Name="Projeto.h" Top="Yes" Tabpos="2" TopLine="97">
-			<Cursor Line="38" Column="1"/>
+		<File Name="Projeto.h" Top="Yes" Tabpos="2" TopLine="526">
+			<Cursor Line="659" Column="46"/>
 		</File>
 	</Files>
 </Layout>

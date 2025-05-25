@@ -10,20 +10,22 @@ int main()
 	barraCarregamento();
 	do{	
 	switch(opMenuPrincipal){
-	case 1:{  // 1-OPCAO 1
+	case 1:{
 		system("cls");
 		MenuCadastro();
 		break;
 	}
-	case 2:{ //2-OPCAO 2
+	case 2:{ 
 		system("cls");
-		MenuImpressao();
+		MenuOrcametos();
 		break;
 	}
-	case 3:{ //3-OPCAO 3
+	case 3:{ 
+		MenuVeiculos();
 		break;
 	}
-	case 4:{ //4-OPCAO 4
+	case 4:{
+		Contatos(); 
 		break;
 	}
 	default:
